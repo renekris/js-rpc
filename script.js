@@ -31,8 +31,8 @@ function game(userSelection, computerSelection) {
         || (userSelection === "scissors" && computerSelection === "paper")
         ) {
             console.log(`You have won,
-            \n User: ${userSelection}
-            \n CPU: ${computerSelection}`);
+            \nUser: ${userSelection}
+            \nCPU: ${computerSelection}`);
     } else if ((userSelection === "rock" && computerSelection === "paper") 
     || (userSelection === "scissors" && computerSelection === "rock") 
     || (userSelection === "paper" && computerSelection === "scissors")) {

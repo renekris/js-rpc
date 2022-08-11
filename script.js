@@ -1,3 +1,7 @@
+let computerScore = 0;
+let userScore = 0;
+let round = 0;
+
 function getComputerChoice() {
     let random = Math.floor(Math.random() * 3) + 1;
     
@@ -33,20 +37,25 @@ function game(userSelection, computerSelection) {
             console.log(`You have won,
             \nUser: ${userSelection}
             \nCPU: ${computerSelection}`);
+            userScore++;
     } else if ((userSelection === "rock" && computerSelection === "paper") 
     || (userSelection === "scissors" && computerSelection === "rock") 
     || (userSelection === "paper" && computerSelection === "scissors")) {
-        
         console.log(`You have lost,
         \nUser: ${userSelection}
         \nCPU: ${computerSelection}`);
+        computerScore++;
     } else {
         console.log(`Tie,
         \nUser: ${userSelection}
         \nCPU: ${computerSelection}`);
     }
+    round++;
 }
 
 for (let i = 1; i <= 5; i++) {
     game(getUserChoice(), getComputerChoice());
+    console.log(`Round: ${round}
+                \nUser Score: ${userScore}
+                \nCPU Score: ${computerScore}`);
 }

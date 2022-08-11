@@ -29,10 +29,9 @@ function getUserChoice() {
 
 function game(userSelection, computerSelection) {
 
-    if(
-        (userSelection === "paper" && computerSelection === "rock") 
-        || (userSelection === "rock" && computerSelection === "scissors") 
-        || (userSelection === "scissors" && computerSelection === "paper")
+    if((userSelection === "paper" && computerSelection === "rock") 
+    || (userSelection === "rock" && computerSelection === "scissors") 
+    || (userSelection === "scissors" && computerSelection === "paper")
         ) {
             console.log(`You have won,
             \nUser: ${userSelection}
@@ -40,11 +39,12 @@ function game(userSelection, computerSelection) {
             userScore++;
     } else if ((userSelection === "rock" && computerSelection === "paper") 
     || (userSelection === "scissors" && computerSelection === "rock") 
-    || (userSelection === "paper" && computerSelection === "scissors")) {
-        console.log(`You have lost,
-        \nUser: ${userSelection}
-        \nCPU: ${computerSelection}`);
-        computerScore++;
+    || (userSelection === "paper" && computerSelection === "scissors")
+        ) {
+            console.log(`You have lost,
+            \nUser: ${userSelection}
+            \nCPU: ${computerSelection}`);
+            computerScore++;
     } else {
         console.log(`Tie,
         \nUser: ${userSelection}

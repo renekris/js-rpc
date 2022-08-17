@@ -1,2 +1,2 @@
-# js-rpc
-This project follows The Odin Project curriculum
+# js-rps
+This repository follows The Odin Project curriculum

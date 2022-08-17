@@ -35,7 +35,7 @@ function game(userSelection, computerSelection) {
     || (userSelection === "scissors" && computerSelection === "paper")
         ) {
             scoreCount.innerText = `You have won,
-            \nUser: ${userSelection}
+            \nUSER: ${userSelection}
             \nCPU: ${computerSelection}`;
             userScore++;
 
@@ -44,21 +44,16 @@ function game(userSelection, computerSelection) {
     || (userSelection === "paper" && computerSelection === "scissors")
         ) {
             scoreCount.innerText = `You have lost,
-            \nUser: ${userSelection}
+            \nUSER: ${userSelection}
             \nCPU: ${computerSelection}`;
             computerScore++;
     } else {
         scoreCount.innerText = `Tie,
-        \nUser: ${userSelection}
+        \nUSER: ${userSelection}
         \nCPU: ${computerSelection}`;
     }
     round++;
 }
-
-// game(getUserChoice(), getComputerChoice());
-// console.log(`Round: ${round}
-// \nUser Score: ${userScore}
-// \nCPU Score: ${computerScore}`);
 
 const button = document.getElementsByClassName("button");
 Array.from(button).forEach(btn => btn.addEventListener("click", playRound));
@@ -74,5 +69,6 @@ function playRound(e) {
         console.log("You've selected scissors!")
         game("scissors", getComputerChoice())
     }
+    console.log(round);
 }
 
